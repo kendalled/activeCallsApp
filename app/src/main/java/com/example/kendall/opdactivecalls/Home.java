@@ -8,8 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
+
+    private TextView timeTextView;
+    private TextView addressTextView;
+    private TextView disturbanceTextView;
+    private TextView districtTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +23,10 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        timeTextView = (TextView) findViewById(R.id.timeTextView);
+        addressTextView = (TextView) findViewById(R.id.addressTextView);
+        disturbanceTextView = (TextView) findViewById(R.id.disturbanceTextView);
+        districtTextView = (TextView) findViewById(R.id.districtTextView);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
