@@ -14,6 +14,13 @@ import java.lang.StringBuilder;
  */
 public class downloadOPDXMLTask extends AsyncTask {
     private String OPDURL = "http://www1.cityoforlando.net/opd/activecalls/";
+    Home homeActivity;
+
+    downloadOPDXMLTask(Home homeActivity){
+        super ();
+        this.homeActivity = homeActivity;
+    }
+
     @Override
     protected Object doInBackground(Object[] objects) {
         // Do some validation here
@@ -29,6 +36,7 @@ public class downloadOPDXMLTask extends AsyncTask {
                     stringBuilder.append(line).append("\n");
                 }
                 bufferedReader.close();
+                Log.e("downloadedXML",stringBuilder.toString());
                 return stringBuilder.toString();
             }
             finally{
@@ -39,5 +47,10 @@ public class downloadOPDXMLTask extends AsyncTask {
             Log.e("ERROR", e.getMessage(), e);
             return null;
         }
+    }
+
+    @Override
+    protected void onPostExecute(Object o) {
+        super.onPostExecute(o);
     }
 }
