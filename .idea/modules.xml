@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OPDActiveCalls.iml" filepath="$PROJECT_DIR$/OPDActiveCalls.iml" />
+      <module fileurl="file://$PROJECT_DIR$/activeCallsApp.iml" filepath="$PROJECT_DIR$/activeCallsApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
