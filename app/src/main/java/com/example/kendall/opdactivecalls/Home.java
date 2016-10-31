@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class Home extends AppCompatActivity {
 
     private TextView timeTextView;
@@ -63,5 +65,10 @@ public class Home extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void configureActivityWithCalls(ArrayList calls){
+
+
     }
 }

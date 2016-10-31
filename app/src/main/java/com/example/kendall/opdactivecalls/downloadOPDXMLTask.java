@@ -52,5 +52,9 @@ public class downloadOPDXMLTask extends AsyncTask {
     @Override
     protected void onPostExecute(Object o) {
         super.onPostExecute(o);
+
+        //take xml, parse, convert into array of calls
+
+        //homeActivity.configureActivityWithCalls();
     }
 }
