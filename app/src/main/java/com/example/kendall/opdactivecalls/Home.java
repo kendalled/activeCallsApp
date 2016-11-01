@@ -67,7 +67,7 @@ public class Home extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void configureActivityWithCalls(ArrayList calls){
+    public static void configureActivityWithCalls(ArrayList calls){
 
 
     }

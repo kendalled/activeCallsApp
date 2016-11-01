@@ -8,6 +8,7 @@ import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.HttpURLConnection;
 import java.lang.StringBuilder;
+import java.util.ArrayList;
 
 /**
  * Created by Kendall Jackson on 10/30/16.
@@ -53,8 +54,8 @@ public class downloadOPDXMLTask extends AsyncTask {
     protected void onPostExecute(Object o) {
         super.onPostExecute(o);
 
-        //take xml, parse, convert into array of calls
-
-        //homeActivity.configureActivityWithCalls();
+        ArrayList<Call> calls = CallFactory.generateCallsWithXML(stringBuilder);
+        // Is stringBuilder where the string version of the XML is saved?
+        Home.configureActivityWithCalls(calls);
     }
 }
