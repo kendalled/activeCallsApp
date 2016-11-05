@@ -37,12 +37,14 @@ public class Home extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        new HandleXML().execute();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        new downloadOPDXMLTask(this).execute();
+        //CallFactory.generateCallsWithXML("sdf");
+
     }
 
     @Override
